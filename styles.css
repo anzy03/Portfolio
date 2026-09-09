@@ -167,8 +167,8 @@ nav {
   align-items: flex-end;
 }
 
-/* Technical Mesh Graphic Background & Dynamic Gradient Aura */
-.intro-mesh-bg {
+/* Game Level Design Blueprint & Encounter Schematic Background */
+.intro-blueprint-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -176,56 +176,27 @@ nav {
   z-index: 0;
 }
 
-.intro-gradient-mesh {
+.intro-blueprint-glow {
   position: absolute;
   inset: -15%;
   background: 
-    radial-gradient(ellipse 60% 45% at 75% 35%, rgba(56, 189, 248, 0.07) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 55% at 85% 75%, rgba(37, 99, 235, 0.09) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 40% at 55% 25%, rgba(14, 165, 233, 0.04) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 35% at 95% 45%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
-  filter: blur(60px);
-  animation: meshAuraPulse 12s ease-in-out infinite alternate;
+    radial-gradient(ellipse 65% 50% at 80% 35%, rgba(56, 189, 248, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 55% at 88% 75%, rgba(37, 99, 235, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 65% 50%, rgba(14, 165, 233, 0.04) 0%, transparent 55%);
+  filter: blur(65px);
+  pointer-events: none;
 }
 
-@keyframes meshAuraPulse {
-  0% {
-    transform: scale(0.96) translate(0, 0);
-    opacity: 0.75;
-  }
-  50% {
-    transform: scale(1.04) translate(-15px, 8px);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) translate(10px, -6px);
-    opacity: 0.85;
-  }
-}
-
-.intro-mesh-graphic {
+.intro-blueprint-svg {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 75% 50%, black 35%, transparent 85%);
-  mask-image: radial-gradient(ellipse 85% 80% at 75% 50%, black 35%, transparent 85%);
-  animation: meshFloat 12s ease-in-out infinite alternate;
-  transform-origin: 75% 50%;
-}
-
-@keyframes meshFloat {
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.015);
-  }
-  100% {
-    transform: translateY(4px) scale(1.005);
-  }
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 75% 50%, black 45%, transparent 92%);
+  mask-image: radial-gradient(ellipse 85% 85% at 75% 50%, black 45%, transparent 92%);
+  transition: opacity 0.4s ease;
 }
 
 .intro-content {
@@ -1141,10 +1112,10 @@ footer {
   nav {
     padding: 0 1.2rem;
   }
-  .intro-mesh-graphic {
-    opacity: 0.55;
-    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 80% 40%, black 20%, transparent 80%);
-    mask-image: radial-gradient(ellipse 90% 90% at 80% 40%, black 20%, transparent 80%);
+  .intro-blueprint-svg {
+    opacity: 0.35;
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 85% 45%, black 20%, transparent 80%);
+    mask-image: radial-gradient(ellipse 90% 90% at 85% 45%, black 20%, transparent 80%);
   }
   .intro-content {
     flex-direction: column;
