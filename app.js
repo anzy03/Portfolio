@@ -211,19 +211,19 @@ const PROJECTS = [
   {
     id: "angry-old-ben",
     title: "Angry Old Ben",
-    cat: "Beat 'Em Up / Unity",
+    cat: "Beat 'Em Up / Unreal Engine 4",
     filter: ["games", "mechanics"],
-    role: "Gameplay & Combat Programmer (C#)",
+    role: "Gameplay & Combat Programmer (C++ / UE4)",
     thumb: "assets/images/angry-old-ben.png",
     thumbFallback: "🥊",
-    desc: "A fast-paced endless beat-'em-up where players control Uncle Ben fighting through overwhelming waves of street enemies to survive and chase high scores.",
-    workflow: "Collaborated with team to program responsive brawler melee hitboxes, combo animations, enemy horde AI aggregation, knockback physics, and scoring multiplier systems in Unity.",
-    tags: ["Unity", "C#", "Beat 'Em Up", "Combat Systems", "Enemy AI"],
+    desc: "A fast-paced endless beat-'em-up developed in Unreal Engine 4 where players control Uncle Ben fighting through overwhelming waves of street enemies to survive and chase high scores.",
+    workflow: "Collaborated with team to program responsive brawler melee hitboxes, combo animations, enemy horde AI aggregation, knockback physics, and scoring multiplier systems in Unreal Engine 4.",
+    tags: ["Unreal Engine 4", "C++", "Blueprints", "Beat 'Em Up", "Combat Systems"],
     links: [
       { label: "Play on Itch.io", url: "https://leasmodeus.itch.io/angry-old-ben" }
     ],
     media: [
-      { type: "image", src: "assets/images/angry-old-ben.png", caption: "Angry Old Ben - Endless beat-'em-up brawler" }
+      { type: "image", src: "assets/images/angry-old-ben.png", caption: "Angry Old Ben - Endless beat-'em-up brawler in Unreal Engine 4" }
     ]
   },
   {
@@ -283,37 +283,37 @@ const PROJECTS = [
   {
     id: "god-of-war-axe",
     title: "Leviathan Axe Recall",
-    cat: "Gameplay Mechanics / UE5",
+    cat: "Gameplay Mechanics / Unity",
     filter: ["mechanics"],
-    role: "Gameplay Programmer (C++ / UE5)",
+    role: "Gameplay Programmer (C# / Unity)",
     thumb: "assets/images/axe-throw.gif",
     thumbFallback: "🪓",
-    desc: "God of War-inspired Leviathan Axe throw, lodge-in-surface, and physical bezier curve recall mechanic developed in Unreal Engine 5.",
-    workflow: "Engineered custom projectile trajectory with surface normal alignment on collision. Quadratic Bezier curve calculation with dynamic camera impulse and haptic rumble on recall catch.",
-    tags: ["Unreal Engine 5", "C++", "Gameplay Mechanics", "Math / Bezier", "Physics"],
+    desc: "God of War-inspired Leviathan Axe throw, lodge-in-surface, and physical bezier curve recall mechanic developed in Unity.",
+    workflow: "Engineered custom projectile trajectory with surface normal alignment on collision in Unity. Quadratic Bezier curve calculation with dynamic camera impulse and physical recall catch.",
+    tags: ["Unity", "C#", "Gameplay Mechanics", "Math / Bezier", "Physics"],
     links: [
       { label: "GitHub Repository", url: "https://github.com/anzy03" }
     ],
     media: [
-      { type: "image", src: "assets/images/axe-throw.gif", caption: "Leviathan Axe - Throw, Impact & Bezier Recall" }
+      { type: "image", src: "assets/images/axe-throw.gif", caption: "Leviathan Axe - Throw, Impact & Bezier Recall in Unity" }
     ]
   },
   {
     id: "brick-spanner",
     title: "Brick Spanner Tool",
-    cat: "Level Design Tool / UE5",
+    cat: "Level Design Tool / Unity",
     filter: ["tools"],
-    role: "Tools Programmer (UE5 / Blueprints)",
+    role: "Tools Programmer (C# / Unity Editor)",
     thumb: "assets/images/brick-spanner.jpg",
     thumbFallback: "🧱",
-    desc: "Procedural level design editor utility widget in Unreal Engine 5 that enables level designers to rapidly generate complex modular brick walls with randomized surface damage.",
-    workflow: "Engineered as an in-editor Blutility. Exposes user-configurable parameters: row count, brick spacing, curvature, and randomized noise seeds for worn brick placement.",
-    tags: ["Unreal Engine 5", "Blueprints", "Editor Utilities", "Procedural Tools", "Level Design"],
+    desc: "Procedural level design editor tool in Unity that enables level designers to rapidly generate complex modular brick walls with randomized surface damage and curvature.",
+    workflow: "Engineered as a custom in-editor tool in Unity C#. Exposes user-configurable parameters: row count, brick spacing, curvature, and randomized noise seeds for procedural placement.",
+    tags: ["Unity", "C#", "Editor Scripting", "Procedural Tools", "Level Design"],
     links: [
       { label: "GitHub Repository", url: "https://github.com/anzy03" }
     ],
     media: [
-      { type: "image", src: "assets/images/brick-spanner.jpg", caption: "Brick Spanner - Procedural Wall Generation in UE5" }
+      { type: "image", src: "assets/images/brick-spanner.jpg", caption: "Brick Spanner - Procedural Wall Generation in Unity" }
     ]
   },
   {
