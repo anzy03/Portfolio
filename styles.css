@@ -5,18 +5,18 @@
    ========================================================================== */
 
 :root {
-  /* Deep Space / Midnight Navy Canvas */
-  --bg:                  #090d16;  /* Deepest midnight obsidian navy */
-  --bg2:                 #0f172a;  /* Rich slate-900 surface for cards/panels */
-  --bg3:                 #1e293b;  /* Elevated slate-800 for hovers/tabs */
-  --white:               #162032;  /* Elevated container surface */
+  /* Deep Obsidian Dark Void Canvas */
+  --bg:                  #04060a;  /* Pure deep obsidian black with cool undertone */
+  --bg2:                 #080c14;  /* Deep dark slate surface for cards/panels */
+  --bg3:                 #0f1524;  /* Elevated hover/tab surface */
+  --white:               #0b101c;  /* Elevated container surface */
   
   /* Crisp Legible Typography Colors */
   --ink:                 #f8fafc;  /* Clean slate-50 primary text */
   --mid:                 #94a3b8;  /* Slate-400 secondary body text */
   --faint:               #64748b;  /* Slate-500 subtle/meta text */
-  --rule:                #1e293b;  /* Slate-800 crisp geometric borders */
-  --rule-light:          rgba(56, 189, 248, 0.16);
+  --rule:                #131b2c;  /* Dark subtle borders */
+  --rule-light:          rgba(56, 189, 248, 0.10);
 
   /* Electric Cyan & Royal Azure Blue Accents */
   --accent:              #38bdf8;  /* Electric cyan / sky-400 */
@@ -106,7 +106,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  background: rgba(9, 13, 22, 0.88);
+  background: rgba(4, 6, 10, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(56, 189, 248, 0.1);
@@ -180,12 +180,12 @@ nav {
   position: absolute;
   inset: -15%;
   background: 
-    radial-gradient(ellipse 60% 45% at 75% 35%, rgba(56, 189, 248, 0.22) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 55% at 85% 75%, rgba(37, 99, 235, 0.26) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 40% at 55% 25%, rgba(14, 165, 233, 0.16) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 35% at 95% 45%, rgba(79, 70, 229, 0.16) 0%, transparent 50%);
-  filter: blur(50px);
-  animation: meshAuraPulse 9s ease-in-out infinite alternate;
+    radial-gradient(ellipse 60% 45% at 75% 35%, rgba(56, 189, 248, 0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 55% at 85% 75%, rgba(37, 99, 235, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 55% 25%, rgba(14, 165, 233, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 95% 45%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
+  filter: blur(60px);
+  animation: meshAuraPulse 12s ease-in-out infinite alternate;
 }
 
 @keyframes meshAuraPulse {
@@ -444,8 +444,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: var(--bg);
-  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
 }
 
 .project-card {
@@ -512,7 +510,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to top, rgba(9, 13, 22, 0.96) 0%, rgba(9, 13, 22, 0.5) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(4, 6, 10, 0.98) 0%, rgba(4, 6, 10, 0.55) 60%, transparent 100%);
   z-index: 2;
   transition: background 0.4s ease;
 }
@@ -954,7 +952,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(5, 8, 15, 0.88);
+  background: rgba(2, 4, 8, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -976,8 +974,8 @@ footer {
   max-width: 1100px;
   height: 85vh;
   max-height: 750px;
-  background: #0d1322;
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: #080c14;
+  border: 1px solid rgba(56, 189, 248, 0.20);
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -987,7 +985,7 @@ footer {
 }
 
 .modal-media-col {
-  background: #070b13;
+  background: #04060a;
   display: flex;
   flex-direction: column;
   position: relative;
