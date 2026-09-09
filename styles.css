@@ -167,38 +167,65 @@ nav {
   align-items: flex-end;
 }
 
-.intro-grid-bg {
+/* Technical Mesh Graphic Background & Dynamic Gradient Aura */
+.intro-mesh-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.16) 1px, transparent 1px);
-  background-size: 28px 28px;
-  animation: dotdrift 14s linear infinite;
-  -webkit-mask-image: radial-gradient(ellipse at 60% 60%, black 20%, transparent 80%);
-  mask-image: radial-gradient(ellipse at 60% 60%, black 20%, transparent 80%);
-}
-
-@keyframes dotdrift {
-  0%   { background-position: 0px 0px; }
-  100% { background-position: 28px 28px; }
-}
-
-.intro-glow {
-  position: absolute;
-  width: 700px;
-  height: 380px;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.18) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 70%);
-  animation: glowpulse 4s ease-in-out infinite alternate;
-  pointer-events: none;
+  overflow: hidden;
   z-index: 0;
 }
 
-@keyframes glowpulse {
-  0%   { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 1.0; transform: translate(-50%, -50%) scale(1.15); }
+.intro-gradient-mesh {
+  position: absolute;
+  inset: -15%;
+  background: 
+    radial-gradient(ellipse 60% 45% at 75% 35%, rgba(56, 189, 248, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 55% at 85% 75%, rgba(37, 99, 235, 0.26) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 55% 25%, rgba(14, 165, 233, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 95% 45%, rgba(79, 70, 229, 0.16) 0%, transparent 50%);
+  filter: blur(50px);
+  animation: meshAuraPulse 9s ease-in-out infinite alternate;
+}
+
+@keyframes meshAuraPulse {
+  0% {
+    transform: scale(0.96) translate(0, 0);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.04) translate(-15px, 8px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translate(10px, -6px);
+    opacity: 0.85;
+  }
+}
+
+.intro-mesh-graphic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 75% 50%, black 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 85% 80% at 75% 50%, black 35%, transparent 85%);
+  animation: meshFloat 12s ease-in-out infinite alternate;
+  transform-origin: 75% 50%;
+}
+
+@keyframes meshFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.015);
+  }
+  100% {
+    transform: translateY(4px) scale(1.005);
+  }
 }
 
 .intro-content {
@@ -1115,6 +1142,11 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 0 1.2rem;
+  }
+  .intro-mesh-graphic {
+    opacity: 0.55;
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 80% 40%, black 20%, transparent 80%);
+    mask-image: radial-gradient(ellipse 90% 90% at 80% 40%, black 20%, transparent 80%);
   }
   .intro-content {
     flex-direction: column;
