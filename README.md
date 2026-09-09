@@ -1,6 +1,6 @@
 # Arnav Sanghavi — Technical Gameplay Designer & Systems Engineer
 
-> **Live Website:** [https://anzy03.github.io/Portflio/](https://anzy03.github.io/Portflio/)
+> **Live Website:** [https://anzy03.github.io/Portflio/](https://anzy03.github.io/Portfolio/)
 
 Technical Gameplay Designer & Gameplay Systems Engineer at **The Coalition Studio (Microsoft)**, specializing in **C++ gameplay architecture, NPC behavior systems (StateTree / Smart Objects), systemic spawning, and player locomotion** across Unreal Engine and Unity.
 
