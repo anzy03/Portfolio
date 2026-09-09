@@ -1,77 +1,121 @@
 <svg class="intro-blueprint-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 650" fill="none" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <pattern id="cleanGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.03" />
+    <pattern id="bpGridSmall" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.04" />
     </pattern>
-    <pattern id="cleanGridMajor" width="160" height="160" patternUnits="userSpaceOnUse">
-      <rect width="160" height="160" fill="url(#cleanGrid)" />
-      <path d="M 160 0 L 0 0 0 160" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.07" />
+    <pattern id="bpGridLarge" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#bpGridSmall)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.09" />
     </pattern>
+    <pattern id="wallHatch" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.16" />
+    </pattern>
+    <linearGradient id="bpLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.0" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#2563eb" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="navmeshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.02" />
+    </linearGradient>
+    <marker id="bpArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#38bdf8" fill-opacity="0.5" />
+    </marker>
+    <marker id="bpArrowDim" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 1 1 L 5 3 L 1 5 Z" fill="#38bdf8" fill-opacity="0.35" />
+    </marker>
     <style>
-      .bp-line { stroke: #38bdf8; stroke-width: 1; stroke-opacity: 0.22; }
-      .bp-line-bright { stroke: #38bdf8; stroke-width: 1.2; stroke-opacity: 0.38; }
-      .bp-cover { stroke: #38bdf8; stroke-width: 1; stroke-opacity: 0.28; fill: rgba(56, 189, 248, 0.03); }
-      .bp-txt { font-family: "JetBrains Mono", monospace; font-size: 8px; fill: #64748b; letter-spacing: 1px; }
-      .bp-txt-cyan { font-family: "JetBrains Mono", monospace; font-size: 8px; fill: #38bdf8; letter-spacing: 1px; opacity: 0.6; }
+      .bp-scan { animation: bpScan 16s linear infinite; }
+      @keyframes bpScan { 0% { transform: translateY(-40px); opacity: 0; } 15% { opacity: 0.5; } 85% { opacity: 0.5; } 100% { transform: translateY(650px); opacity: 0; } }
+      .bp-dim { stroke: #38bdf8; stroke-opacity: 0.3; stroke-width: 0.8; stroke-dasharray: 4,3; }
+      .bp-wall { stroke: #38bdf8; stroke-width: 1.6; stroke-opacity: 0.55; fill: url(#wallHatch); }
+      .bp-cover-low { stroke: #38bdf8; stroke-width: 1.2; stroke-opacity: 0.5; fill: rgba(56, 189, 248, 0.06); }
+      .bp-cover-high { stroke: #60a5fa; stroke-width: 1.3; stroke-opacity: 0.55; fill: rgba(37, 99, 235, 0.10); }
+      .bp-title { font-family: "JetBrains Mono", monospace; font-size: 9.5px; fill: #38bdf8; font-weight: 600; letter-spacing: 1.2px; }
+      .bp-meta { font-family: "JetBrains Mono", monospace; font-size: 7.5px; fill: #64748b; letter-spacing: 0.8px; }
+      .bp-label { font-family: "JetBrains Mono", monospace; font-size: 8px; fill: #7dd3fc; font-weight: 500; letter-spacing: 0.6px; }
     </style>
   </defs>
-  <rect x="520" y="0" width="920" height="650" fill="url(#cleanGridMajor)" />
-  <g transform="translate(1120, 45)">
-    <line x1="0" y1="0" x2="260" y2="0" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.25" />
-    <text x="0" y="16" class="bp-txt-cyan">MAP_SPEC // SECTOR_04</text>
-    <text x="0" y="28" class="bp-txt">SCALE: 1UU = 1CM · UE5</text>
-    <text x="210" y="16" class="bp-txt" text-anchor="end">REV 04</text>
+  <rect x="520" y="0" width="920" height="650" fill="url(#bpGridLarge)" />
+  <g class="bp-scan">
+    <line x1="560" y1="0" x2="1420" y2="0" stroke="url(#bpLineGrad)" stroke-width="1.2" stroke-opacity="0.35" />
   </g>
-  <g class="bp-line">
-    <line x1="780" y1="180" x2="1010" y2="180" class="bp-line-bright" />
-    <line x1="1070" y1="180" x2="1340" y2="180" class="bp-line-bright" />
-    <line x1="1340" y1="180" x2="1340" y2="300" class="bp-line-bright" />
-    <line x1="1340" y1="360" x2="1340" y2="480" class="bp-line-bright" />
-    <line x1="1340" y1="300" x2="1420" y2="300" />
-    <line x1="1340" y1="360" x2="1420" y2="360" />
-    <line x1="1340" y1="480" x2="840" y2="480" class="bp-line-bright" />
-    <line x1="840" y1="480" x2="780" y2="420" class="bp-line-bright" />
-    <line x1="780" y1="420" x2="780" y2="180" class="bp-line-bright" />
+  <g transform="translate(1020, 32)">
+    <rect x="0" y="0" width="380" height="46" fill="#04060a" fill-opacity="0.75" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+    <line x1="0" y1="22" x2="380" y2="22" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.2" />
+    <text x="12" y="15" class="bp-title">SYS.LEVEL_DESIGN // ENCOUNTER_SCHEMATIC</text>
+    <text x="368" y="15" class="bp-meta" fill="#38bdf8" text-anchor="end">REV 04</text>
+    <text x="12" y="36" class="bp-meta">UNREAL ENGINE 5 · C++ / STATETREE · SCALE: 1UU = 1CM</text>
   </g>
-  <circle cx="780" cy="180" r="2" fill="#38bdf8" fill-opacity="0.35" />
-  <circle cx="1340" cy="180" r="2" fill="#38bdf8" fill-opacity="0.35" />
-  <circle cx="1340" cy="480" r="2" fill="#38bdf8" fill-opacity="0.35" />
-  <circle cx="840" cy="480" r="2" fill="#38bdf8" fill-opacity="0.35" />
-  <rect x="880" y="240" width="80" height="18" rx="2" class="bp-cover" />
-  <rect x="1160" y="235" width="28" height="28" rx="2" class="bp-cover" />
-  <rect x="1000" y="320" width="100" height="20" rx="2" class="bp-cover" />
-  <rect x="910" y="395" width="28" height="28" rx="2" class="bp-cover" />
-  <rect x="1150" y="395" width="80" height="18" rx="2" class="bp-cover" />
-  <g transform="translate(840, 330)">
-    <circle cx="0" cy="0" r="12" stroke="#38bdf8" stroke-width="0.9" stroke-opacity="0.4" fill="none" />
-    <circle cx="0" cy="0" r="2.5" fill="#38bdf8" fill-opacity="0.7" />
-    <line x1="-16" y1="0" x2="16" y2="0" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.3" />
-    <line x1="0" y1="-16" x2="0" y2="16" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.3" />
-    <text x="-16" y="-18" class="bp-txt-cyan" font-size="7.5px">PLAYER_START</text>
+  <polygon points="680,170 1260,170 1340,230 1340,430 1220,490 740,490 680,430" fill="url(#navmeshGrad)" stroke="#0284c7" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="6,4" />
+  <text x="696" y="190" class="bp-meta" opacity="0.6">NAVMESH_WALKABLE // RECAST</text>
+  <path d="M 690,210 L 980,210 M 1040,210 L 1280,210" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
+  <rect x="690" y="202" width="290" height="8" class="bp-wall" />
+  <rect x="1040" y="202" width="240" height="8" class="bp-wall" />
+  <path d="M 1280,210 L 1280,290 M 1280,350 L 1280,460" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
+  <rect x="1272" y="210" width="8" height="80" class="bp-wall" />
+  <rect x="1272" y="350" width="8" height="110" class="bp-wall" />
+  <path d="M 1280,290 L 1330,290 M 1280,350 L 1330,350" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+  <path d="M 1330,290 A 60 60 0 0 1 1330,350" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="3,3" />
+  <path d="M 1280,460 L 740,460 L 690,410 L 690,210" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
+  <rect x="740" y="452" width="540" height="8" class="bp-wall" />
+  <rect x="790" y="250" width="85" height="16" rx="2" class="bp-cover-low" />
+  <rect x="910" y="250" width="30" height="30" rx="2" class="bp-cover-high" />
+  <line x1="910" y1="250" x2="940" y2="280" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
+  <line x1="910" y1="280" x2="940" y2="250" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
+  <rect x="990" y="315" width="110" height="18" rx="2" class="bp-cover-low" />
+  <rect x="1140" y="250" width="30" height="30" rx="2" class="bp-cover-high" />
+  <line x1="1140" y1="250" x2="1170" y2="280" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
+  <line x1="1140" y1="280" x2="1170" y2="250" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
+  <rect x="850" y="385" width="90" height="16" rx="2" class="bp-cover-low" />
+  <rect x="1110" y="385" width="90" height="16" rx="2" class="bp-cover-low" />
+  <g transform="translate(730, 335)">
+    <circle cx="0" cy="0" r="13" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7" fill="none" />
+    <circle cx="0" cy="0" r="3.5" fill="#38bdf8" fill-opacity="0.85" />
+    <line x1="-16" y1="0" x2="16" y2="0" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
+    <line x1="0" y1="-16" x2="0" y2="16" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
+    <text x="-20" y="-18" class="bp-label">PLAYER_START</text>
   </g>
-  <g transform="translate(1260, 330)">
-    <polygon points="0,-10 10,0 0,10 -10,0" stroke="#38bdf8" stroke-width="0.9" stroke-opacity="0.4" fill="none" />
-    <circle cx="0" cy="0" r="2" fill="#38bdf8" fill-opacity="0.7" />
-    <text x="14" y="3" class="bp-txt" font-size="7.5px">OBJ // A</text>
+  <path d="M 744,330 L 980,250 M 744,340 L 980,420" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="4,4" />
+  <path d="M 825,305 A 95 95 0 0 1 825,365" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
+  <text x="832" y="338" class="bp-meta" opacity="0.6">FOV 65°</text>
+  <path d="M 750,320 Q 820,230 890,230 T 1050,225 T 1200,270" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="6,4" marker-end="url(#bpArrow)" />
+  <path d="M 750,350 Q 820,430 920,430 T 1080,430 T 1210,370" fill="none" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="6,4" marker-end="url(#bpArrow)" />
+  <g transform="translate(1230, 325)">
+    <circle cx="0" cy="0" r="22" stroke="#ef4444" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4,3" fill="rgba(239, 68, 68, 0.04)" />
+    <circle cx="0" cy="0" r="10" stroke="#ef4444" stroke-width="0.9" stroke-opacity="0.6" fill="none" />
+    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#ef4444" stroke-width="1" stroke-opacity="0.7" />
+    <line x1="5" y1="-5" x2="-5" y2="5" stroke="#ef4444" stroke-width="1" stroke-opacity="0.7" />
+    <text x="-32" y="-28" class="bp-label" fill="#f87171">AI_SPAWN_ZONE</text>
   </g>
-  <path d="M 855,325 Q 980,210 1250,320" fill="none" stroke="#38bdf8" stroke-width="0.9" stroke-opacity="0.22" stroke-dasharray="6,6" />
-  <path d="M 855,335 Q 980,450 1250,340" fill="none" stroke="#38bdf8" stroke-width="0.9" stroke-opacity="0.18" stroke-dasharray="6,6" />
-  <g opacity="0.4">
-    <line x1="780" y1="505" x2="1340" y2="505" stroke="#38bdf8" stroke-width="0.6" stroke-dasharray="3,3" />
-    <line x1="780" y1="495" x2="780" y2="515" stroke="#38bdf8" stroke-width="0.6" />
-    <line x1="1340" y1="495" x2="1340" y2="515" stroke="#38bdf8" stroke-width="0.6" />
-    <text x="1060" y="520" class="bp-txt" text-anchor="middle" font-size="7.5px">SPAN: 2800 UU (28.0m)</text>
-  </g>
-  <g transform="translate(940, 150)" opacity="0.25">
-    <line x1="-5" y1="0" x2="5" y2="0" stroke="#38bdf8" stroke-width="0.6" />
-    <line x1="0" y1="-5" x2="0" y2="5" stroke="#38bdf8" stroke-width="0.6" />
-  </g>
-  <g transform="translate(1240, 150)" opacity="0.25">
-    <line x1="-5" y1="0" x2="5" y2="0" stroke="#38bdf8" stroke-width="0.6" />
-    <line x1="0" y1="-5" x2="0" y2="5" stroke="#38bdf8" stroke-width="0.6" />
-  </g>
-  <g transform="translate(1050, 440)" opacity="0.25">
-    <line x1="-5" y1="0" x2="5" y2="0" stroke="#38bdf8" stroke-width="0.6" />
-    <line x1="0" y1="-5" x2="0" y2="5" stroke="#38bdf8" stroke-width="0.6" />
+  <line x1="690" y1="485" x2="1280" y2="485" class="bp-dim" marker-start="url(#bpArrowDim)" marker-end="url(#bpArrowDim)" />
+  <line x1="690" y1="472" x2="690" y2="495" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
+  <line x1="1280" y1="472" x2="1280" y2="495" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
+  <text x="985" y="498" class="bp-meta" text-anchor="middle">SPAN: 3600 UU (36m)</text>
+  <g transform="translate(940, 528)">
+    <rect x="0" y="0" width="460" height="80" rx="4" fill="#04060a" fill-opacity="0.85" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+    <g transform="translate(12, 12)">
+      <rect x="0" y="0" width="120" height="56" rx="3" fill="#080c14" stroke="#0284c7" stroke-width="0.8" stroke-opacity="0.5" />
+      <path d="M 0 3 Q 0 0 3 0 L 117 0 Q 120 0 120 3 L 120 18 L 0 18 Z" fill="#0284c7" fill-opacity="0.3" />
+      <text x="8" y="13" class="bp-label" font-size="7.5px" fill="#e0f2fe">OnCombatEnter</text>
+      <polygon points="108,32 114,35 108,38" fill="#ffffff" fill-opacity="0.75" />
+    </g>
+    <path d="M 126,47 C 142,47 142,47 155,47" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.6" />
+    <g transform="translate(155, 12)">
+      <rect x="0" y="0" width="135" height="56" rx="3" fill="#080c14" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
+      <path d="M 0 3 Q 0 0 3 0 L 132 0 Q 135 0 135 3 L 135 18 L 0 18 Z" fill="#38bdf8" fill-opacity="0.25" />
+      <text x="8" y="13" class="bp-label" font-size="7.5px" fill="#38bdf8">SmartObject: Cover</text>
+      <polygon points="6,32 12,35 6,38" fill="#ffffff" fill-opacity="0.75" />
+      <polygon points="123,32 129,35 123,38" fill="#ffffff" fill-opacity="0.75" />
+    </g>
+    <path d="M 284,47 C 300,47 300,47 312,47" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.6" />
+    <g transform="translate(312, 12)">
+      <rect x="0" y="0" width="132" height="56" rx="3" fill="#080c14" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.5" />
+      <path d="M 0 3 Q 0 0 3 0 L 129 0 Q 132 0 132 3 L 132 18 L 0 18 Z" fill="#818cf8" fill-opacity="0.25" />
+      <text x="8" y="13" class="bp-label" font-size="7.5px" fill="#c7d2fe">StateTree: SelectTask</text>
+      <polygon points="6,32 12,35 6,38" fill="#ffffff" fill-opacity="0.75" />
+    </g>
   </g>
 </svg>
