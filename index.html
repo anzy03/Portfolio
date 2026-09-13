@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="styles.css?v=12.0" />
+  <link rel="stylesheet" href="styles.css?v=13.0" />
 </head>
 <body>
 
@@ -135,9 +135,9 @@
     
     <div class="intro-content">
       <div class="intro-left">
-        <div class="intro-tagline">The Coalition (Microsoft) · Gears of War: E-Day</div>
-        <h1 class="intro-name">Arnav<br /><em>Sanghavi</em></h1>
-        <p class="intro-role-desc">
+        <div class="intro-tagline" id="intro-tagline">The Coalition (Microsoft) · Gears of War: E-Day</div>
+        <h1 class="intro-name" id="intro-name">Arnav<br /><em>Sanghavi</em></h1>
+        <p class="intro-role-desc" id="intro-role-desc">
           Technical Gameplay Designer & Gameplay Systems Engineer at <strong>The Coalition Studio (Microsoft)</strong>. Specializing in <strong>C++ gameplay architecture, NPC behavior systems (StateTree / Smart Objects), systemic spawning, and player locomotion</strong> across Unreal Engine and Unity.
         </p>
         
@@ -147,7 +147,7 @@
         </div>
       </div>
       
-      <div class="intro-meta">
+      <div class="intro-meta" id="intro-meta">
         <div>Vancouver, BC, Canada</div>
         <a href="https://www.linkedin.com/in/arnavsanghavi/" target="_blank">LinkedIn ↗</a> ·
         <a href="https://github.com/anzy03" target="_blank">GitHub ↗</a> ·
@@ -190,148 +190,12 @@
 
     <!-- Work Experience Group -->
     <div class="exp-group" id="exp-group-pro">
-      
-      <!-- The Coalition Studio -->
-      <div class="exp-row">
-        <div class="exp-row-left">
-          <div class="exp-date">Feb 2024 — Present</div>
-          <div class="exp-org">The Coalition Studio</div>
-          <div style="font-family:var(--mono); font-size:0.6rem; color:var(--mid); margin-top:0.2rem;">Microsoft / Xbox</div>
-          <div style="font-family:var(--mono); font-size:0.58rem; color:var(--mid); margin-top:0.35rem;">Gears of War: E-Day</div>
-        </div>
-        <div class="exp-row-right">
-          <div class="exp-role">Technical Gameplay Designer</div>
-          <p class="exp-summary">
-            Lead technical design and C++ implementation of core systemic mechanics, NPC behaviors, and actor population pipelines for AAA production.
-          </p>
-          <ul class="exp-bullets">
-            <li>Owned the architecture and runtime optimization of NPC behavior systems, implementing modular AI frameworks (StateTree, Smart Objects) to power dense, low-latency background populations in live builds.</li>
-            <li>Spearheaded the technical design and optimization of all in-game systemic spawning mechanics, taking full end-to-end ownership of development and maintenance.</li>
-            <li>Oversaw technical design and optimization of equipment and inventory systems, utilizing data-oriented design fundamentals to drastically reduce CPU overhead and frame-time constraints.</li>
-            <li>Partnered directly with engineering to lead native C++ conversions of critical gameplay systems, profiling CPU, memory, and runtime bottlenecks with LOD and culling strategies.</li>
-            <li>Served as primary technical point-of-contact for gameplay systems, authoring comprehensive architecture documentation and unblocking cross-discipline workflows.</li>
-          </ul>
-          <div class="exp-chips">
-            <span class="exp-chip">Unreal Engine 5</span>
-            <span class="exp-chip">C++</span>
-            <span class="exp-chip">StateTree</span>
-            <span class="exp-chip">Smart Objects</span>
-            <span class="exp-chip">Systemic AI</span>
-            <span class="exp-chip">Data-Oriented Design</span>
-            <span class="exp-chip">Perforce</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BL!NK MEDIA INC -->
-      <div class="exp-row">
-        <div class="exp-row-left">
-          <div class="exp-date">Oct 2022 — Feb 2024</div>
-          <div class="exp-org">BL!NK MEDIA INC</div>
-          <div style="font-family:var(--mono); font-size:0.58rem; color:var(--mid); margin-top:0.35rem;">FEI Equestriad World Tour</div>
-        </div>
-        <div class="exp-row-right">
-          <div class="exp-role">Game Programmer 1</div>
-          <p class="exp-summary">
-            Engineered gameplay systems, movement controllers, and technical pipelines across live-service mobile and PC titles.
-          </p>
-          <ul class="exp-bullets">
-            <li>Optimized multiplayer gameplay systems, weapon mechanics, and character locomotion, reducing CPU/network overhead and improving responsiveness by 15%.</li>
-            <li>Took sole ownership of an inherited, undocumented legacy codebase; refactored unoptimized systems to integrate scalable data-oriented mechanics with zero downtime.</li>
-            <li>Delivered a fully functional modular AI agent prototype within a strict one-month sprint, achieving runtime performance gains integrated into the production build.</li>
-            <li>Authored technical documentation and workflow architecture guides for Unity and Unreal, accelerating engineering onboarding and reducing troubleshooting time by 30%.</li>
-            <li>Assisted designers with visual scripting and custom tools, implementing 5 new systemic mechanics while aligning design goals with performant code.</li>
-          </ul>
-          <div class="exp-chips">
-            <span class="exp-chip">Unity</span>
-            <span class="exp-chip">Unreal Engine</span>
-            <span class="exp-chip">C#</span>
-            <span class="exp-chip">C++</span>
-            <span class="exp-chip">Multiplayer Optimization</span>
-            <span class="exp-chip">Legacy Refactoring</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Freelance Game Developer -->
-      <div class="exp-row">
-        <div class="exp-row-left">
-          <div class="exp-date">Oct 2021 — Oct 2022</div>
-          <div class="exp-org">Independent / Contract</div>
-        </div>
-        <div class="exp-row-right">
-          <div class="exp-role">Game Developer</div>
-          <p class="exp-summary">
-            Full-lifecycle multiplayer architecture, engine migration, and core character controller engineering.
-          </p>
-          <ul class="exp-bullets">
-            <li>Engineered a high-performance multiplayer system using Photon, and successfully migrated the entire project from Unreal 5 to Unity in under 30 days with minimal downtime.</li>
-            <li>Optimized system architecture and introduced Git / Gitflow version control, reducing development turnaround time by 25% and boosting collaboration efficiency by 30%.</li>
-            <li>Co-authored the main player controller and dynamic camera systems, improving player movement responsiveness and retention by 15%.</li>
-            <li>Prototyped interactive UI systems and player workflows that increased user engagement by 20%.</li>
-          </ul>
-          <div class="exp-chips">
-            <span class="exp-chip">Unity</span>
-            <span class="exp-chip">Photon Multiplayer</span>
-            <span class="exp-chip">UE5 Migration</span>
-            <span class="exp-chip">Player Controllers</span>
-            <span class="exp-chip">Gitflow</span>
-          </div>
-        </div>
-      </div>
-
+      <!-- Rendered dynamically from data.json -->
     </div>
 
     <!-- Education Group -->
     <div class="exp-group" id="exp-group-edu">
-      
-      <!-- KPU CEA -->
-      <div class="exp-row">
-        <div class="exp-row-left">
-          <div class="exp-date">2020 — 2022</div>
-          <div class="exp-org">Kwantlen Polytechnic University</div>
-          <div style="font-family:var(--mono); font-size:0.6rem; color:var(--mid); margin-top:0.2rem;">Center for Entertainment Arts (CEA)</div>
-          <div style="font-family:var(--mono); font-size:0.58rem; color:var(--mid); margin-top:0.35rem;">Graduated with Distinction</div>
-        </div>
-        <div class="exp-row-right">
-          <div class="exp-role">Diploma in Advanced Game Technology</div>
-          <p class="exp-summary">
-            Rigorous, studio-simulated game development program emphasizing low-level C++ programming, engine mechanics, systemic AI, and cross-discipline collaboration.
-          </p>
-          <ul class="exp-bullets">
-            <li>Rapidly prototyped and delivered 10+ complete games in Unreal Engine and Unity under strict weekly constraints.</li>
-            <li>Engineered custom level design tools that increased layout efficiency by 800%, allowing the generation of 5 levels in 30 minutes.</li>
-            <li>Created custom stealth locomotion, camera shake systems, and AI perception trees for final graduation project AZAD.</li>
-          </ul>
-          <div class="exp-chips">
-            <span class="exp-chip">C++</span>
-            <span class="exp-chip">Unreal Engine</span>
-            <span class="exp-chip">Unity</span>
-            <span class="exp-chip">Tools Programming</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mumbai University -->
-      <div class="exp-row">
-        <div class="exp-row-left">
-          <div class="exp-date">2017 — 2019</div>
-          <div class="exp-org">Mumbai University</div>
-        </div>
-        <div class="exp-row-right">
-          <div class="exp-role">Bachelor of Science in Information Technology (B.Sc. IT)</div>
-          <p class="exp-summary">
-            Comprehensive foundation in computer science, software engineering, algorithms, data structures, object-oriented programming, and computer networking.
-          </p>
-          <div class="exp-chips">
-            <span class="exp-chip">Data Structures</span>
-            <span class="exp-chip">Algorithms</span>
-            <span class="exp-chip">Software Architecture</span>
-            <span class="exp-chip">Computer Networking</span>
-          </div>
-        </div>
-      </div>
-
+      <!-- Rendered dynamically from data.json -->
     </div>
   </section>
 
@@ -341,50 +205,8 @@
       <span class="sec-title">Technical Stack & Skills</span>
     </div>
     
-    <div class="skills-grid">
-      <div class="skill-col">
-        <div class="skill-col-label">Engines & Architecture</div>
-        <ul class="skill-list">
-          <li>Unreal Engine 5 / UE4</li>
-          <li>Unity (URP & Built-in)</li>
-          <li>Data-Oriented Design</li>
-          <li>Photon Multiplayer</li>
-          <li>Raylib & OpenCV</li>
-        </ul>
-      </div>
-      
-      <div class="skill-col">
-        <div class="skill-col-label">Languages & Shaders</div>
-        <ul class="skill-list">
-          <li>C++ (Modern / Unreal Native)</li>
-          <li>C# (.NET / Unity)</li>
-          <li>Blueprints / Visual Scripting</li>
-          <li>HLSL / ShaderLab</li>
-          <li>Python & Shell Scripting</li>
-        </ul>
-      </div>
-
-      <div class="skill-col">
-        <div class="skill-col-label">Gameplay & AI Systems</div>
-        <ul class="skill-list">
-          <li>StateTree & Smart Objects</li>
-          <li>AI Perception & Behavior Trees</li>
-          <li>Systemic Actor Spawning</li>
-          <li>Character Locomotion & Physics</li>
-          <li>Inventory & Equipment Architectures</li>
-        </ul>
-      </div>
-
-      <div class="skill-col">
-        <div class="skill-col-label">Profiling & Pipeline</div>
-        <ul class="skill-list">
-          <li>Perforce (P4 / P4D Server Admin)</li>
-          <li>Git & Gitflow Workflows</li>
-          <li>Unreal Insights & CPU Profiling</li>
-          <li>LOD & Culling Optimization</li>
-          <li>Visual Studio & Custom Editor Tools</li>
-        </ul>
-      </div>
+    <div class="skills-grid" id="skills-grid">
+      <!-- Rendered dynamically from data.json -->
     </div>
   </section>
 
@@ -397,35 +219,27 @@
     <div class="about-inner">
       <div class="about-card">
         <div class="about-avatar">
-          <img src="assets/profile.jpg" alt="Arnav Sanghavi" class="about-avatar-img" />
+          <img src="assets/profile.jpg" alt="Arnav Sanghavi" class="about-avatar-img" id="about-avatar-img" />
         </div>
-        <div class="about-name">Arnav Sanghavi</div>
-        <div class="about-title">Technical Gameplay Designer</div>
-        <div class="about-loc">The Coalition · Vancouver, BC</div>
+        <div class="about-name" id="about-name">Arnav Sanghavi</div>
+        <div class="about-title" id="about-title">Technical Gameplay Designer</div>
+        <div class="about-loc" id="about-loc">The Coalition · Vancouver, BC</div>
       </div>
       
       <div class="about-text">
-        <p>
-          I have always been fascinated by games for as long as I can remember. That curiosity naturally evolved into a deep passion for <strong>technical gameplay design and C++ systems engineering</strong> — architecting systemic mechanics, authoring intelligent NPC behaviors, and building tools that bridge creative design visions with performant engine code.
-        </p>
-        <p>
-          Currently at <strong>The Coalition Studio (Microsoft)</strong> contributing to <strong>Gears of War: E-Day</strong>, I specialize in architecting runtime NPC behavior frameworks (StateTree, Smart Objects), systemic spawning pipelines, and native C++ gameplay conversion. Prior to this, I programmed gameplay and optimized multiplayer systems at <strong>BL!NK MEDIA INC</strong> on <em>FEI Equestriad World Tour</em>.
-        </p>
-        <p>
-          I thrive in high-collaboration studio environments where engineering, design, and animation intersect to create tactile, unforgettable player experiences.
-        </p>
+        <div id="about-paragraphs">
+          <!-- Rendered dynamically from data.json -->
+        </div>
         
         <!-- CONTACT INFO -->
         <div class="about-contact" id="contact">
           <div class="about-contact-label">Get In Touch & Connect</div>
           <div class="about-contact-row">
-            <a href="mailto:arnav.sanghavi@gmail.com" class="btn-solid about-email-btn">
+            <a href="mailto:arnav.sanghavi@gmail.com" class="btn-solid about-email-btn" id="about-email-btn">
               <span>✉</span> arnav.sanghavi@gmail.com
             </a>
-            <div class="about-socials">
-              <a href="https://www.linkedin.com/in/arnavsanghavi/" target="_blank" class="social-link">LinkedIn ↗</a>
-              <a href="https://github.com/anzy03" target="_blank" class="social-link">GitHub ↗</a>
-              <a href="https://mranzy.itch.io/" target="_blank" class="social-link">itch.io ↗</a>
+            <div class="about-socials" id="about-socials">
+              <!-- Rendered dynamically from data.json -->
             </div>
           </div>
         </div>
@@ -434,7 +248,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="site-footer">
     <span>© 2026 Arnav Sanghavi</span>
     <span>Gameplay Programmer · Vancouver, BC</span>
   </footer>
@@ -469,6 +283,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=12.0"></script>
+  <script src="data.js?v=13.0"></script>
+  <script src="app.js?v=13.0"></script>
 </body>
 </html>
