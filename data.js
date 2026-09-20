@@ -2,7 +2,7 @@
 window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Arnav Sanghavi",
-    "nameFormatted": "Arnav<br /><em>Sanghavi</em>",
+    "nameFormatted": "Arnav <em>Sanghavi</em>",
     "tagline": "The Coalition (Microsoft) · Gears of War: E-Day",
     "roleTitle": "Technical Gameplay Designer & Gameplay Systems Engineer",
     "roleDesc": "Technical Gameplay Designer & Gameplay Systems Engineer at <strong>The Coalition Studio (Microsoft)</strong>. Specializing in <strong>C++ gameplay architecture, NPC behavior systems (StateTree / Smart Objects), systemic spawning, and player locomotion</strong> across Unreal Engine and Unity.",
@@ -10,6 +10,7 @@ window.PORTFOLIO_DATA = {
     "email": "arnav.sanghavi@gmail.com",
     "avatar": "assets/profile.jpg",
     "aboutLocation": "The Coalition · Vancouver, BC",
+    "resume": "assets/Arnav_Sanghavi_Resume.pdf",
     "socials": [
       {
         "label": "LinkedIn",
@@ -132,7 +133,10 @@ window.PORTFOLIO_DATA = {
   ],
   "skills": [
     {
+      "id": "engines",
+      "sysCode": "SYS_01",
       "category": "Engines & Architecture",
+      "desc": "Core game engines, spatial runtimes & networking frameworks",
       "items": [
         "Unreal Engine 5 / UE4",
         "Unity (URP & Built-in)",
@@ -142,7 +146,10 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
+      "id": "languages",
+      "sysCode": "SYS_02",
       "category": "Languages & Shaders",
+      "desc": "High-performance systems programming & GPU rendering pipelines",
       "items": [
         "C++ (Modern / Unreal Native)",
         "C# (.NET / Unity)",
@@ -152,7 +159,10 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
+      "id": "gameplay-ai",
+      "sysCode": "SYS_03",
       "category": "Gameplay & AI Systems",
+      "desc": "Autonomous behavior frameworks, StateTrees & systemic spawning",
       "items": [
         "StateTree & Smart Objects",
         "AI Perception & Behavior Trees",
@@ -162,7 +172,10 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
+      "id": "pipeline",
+      "sysCode": "SYS_04",
       "category": "Profiling & Pipeline",
+      "desc": "Performance diagnostics, VCS workflows & editor tooling",
       "items": [
         "Perforce (P4 / P4D Server Admin)",
         "Git & Gitflow Workflows",

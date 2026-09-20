@@ -53,14 +53,20 @@ function renderProfile(profile) {
   const roleDescEl = document.getElementById("intro-role-desc");
   if (roleDescEl && profile.roleDesc) roleDescEl.innerHTML = profile.roleDesc;
 
-  const introMetaEl = document.getElementById("intro-meta");
-  if (introMetaEl) {
-    const locHtml = profile.location ? `<div>${profile.location}</div>` : "";
-    const socialsHtml = (profile.socials || [])
-      .map(s => `<a href="${s.url}" target="_blank">${s.label} ↗</a>`)
-      .join(" · ");
-    introMetaEl.innerHTML = `${locHtml}${socialsHtml}`;
+  const introEmailBtn = document.getElementById("intro-email-btn");
+  if (introEmailBtn && profile.email) {
+    introEmailBtn.href = `mailto:${profile.email}`;
+    introEmailBtn.innerHTML = `<span>✉</span> Contact Me`;
   }
+
+  const introSocialsEl = document.getElementById("intro-socials");
+  if (introSocialsEl && profile.socials) {
+    introSocialsEl.innerHTML = profile.socials
+      .map(s => `<a href="${s.url}" target="_blank" class="social-link">${s.label} ↗</a>`)
+      .join("");
+  }
+
+
 
   // About section
   const avatarEl = document.getElementById("about-avatar-img");
@@ -72,8 +78,7 @@ function renderProfile(profile) {
   const aboutNameEl = document.getElementById("about-name");
   if (aboutNameEl && profile.name) aboutNameEl.textContent = profile.name;
 
-  const aboutTitleEl = document.getElementById("about-title");
-  if (aboutTitleEl && profile.roleTitle) aboutTitleEl.textContent = profile.roleTitle;
+
 
   const aboutLocEl = document.getElementById("about-loc");
   if (aboutLocEl && profile.aboutLocation) aboutLocEl.textContent = profile.aboutLocation;
@@ -83,18 +88,12 @@ function renderProfile(profile) {
     aboutParagraphsEl.innerHTML = profile.aboutParagraphs.map(p => `<p>${p}</p>`).join("");
   }
 
-  const aboutEmailBtn = document.getElementById("about-email-btn");
-  if (aboutEmailBtn && profile.email) {
-    aboutEmailBtn.href = `mailto:${profile.email}`;
-    aboutEmailBtn.innerHTML = `<span>✉</span> ${profile.email}`;
+  const resumeBtn = document.getElementById("about-resume-btn");
+  if (resumeBtn && profile.resume) {
+    resumeBtn.href = profile.resume;
   }
 
-  const aboutSocialsEl = document.getElementById("about-socials");
-  if (aboutSocialsEl && profile.socials) {
-    aboutSocialsEl.innerHTML = profile.socials
-      .map(s => `<a href="${s.url}" target="_blank" class="social-link">${s.label} ↗</a>`)
-      .join("");
-  }
+
 
   // Footer
   const footerYear = new Date().getFullYear();
@@ -111,74 +110,155 @@ function renderExperience(experienceList) {
   const proGroup = document.getElementById("exp-group-pro");
   if (!proGroup || !experienceList) return;
 
-  proGroup.innerHTML = experienceList.map(exp => `
-    <div class="exp-row">
-      <div class="exp-row-left">
-        <div class="exp-date">${exp.period}</div>
-        <div class="exp-org">${exp.org}</div>
-        ${exp.subOrg ? `<div style="font-family:var(--mono); font-size:0.6rem; color:var(--mid); margin-top:0.2rem;">${exp.subOrg}</div>` : ""}
-        ${exp.project ? `<div style="font-family:var(--mono); font-size:0.58rem; color:var(--mid); margin-top:0.35rem;">${exp.project}</div>` : ""}
-      </div>
-      <div class="exp-row-right">
-        <div class="exp-role">${exp.role}</div>
-        ${exp.summary ? `<p class="exp-summary">${exp.summary}</p>` : ""}
-        ${exp.bullets && exp.bullets.length > 0 ? `
-          <ul class="exp-bullets">
-            ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
-          </ul>
-        ` : ""}
-        ${exp.chips && exp.chips.length > 0 ? `
-          <div class="exp-chips">
-            ${exp.chips.map(c => `<span class="exp-chip">${c}</span>`).join("")}
+  proGroup.innerHTML = `
+    <div class="exp-timeline">
+      ${experienceList.map(exp => {
+        const isCurrent = exp.period && exp.period.toLowerCase().includes("present");
+        return `
+          <div class="timeline-item ${isCurrent ? "is-current" : ""}">
+            <div class="timeline-spine">
+              <div class="timeline-node">
+                ${isCurrent ? '<span class="timeline-pulse"></span>' : ""}
+              </div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-badge">${exp.period}</span>
+                  ${isCurrent ? '<span class="timeline-current-tag">Current Position</span>' : ""}
+                </div>
+                <h3 class="timeline-title">${exp.role}</h3>
+                <div class="timeline-company">
+                  <span class="timeline-org">${exp.org}</span>
+                  ${exp.subOrg ? `<span class="timeline-suborg">· ${exp.subOrg}</span>` : ""}
+                  ${exp.project ? `<span class="timeline-project">✦ ${exp.project}</span>` : ""}
+                </div>
+              </div>
+              ${exp.summary ? `<p class="timeline-summary">${exp.summary}</p>` : ""}
+              ${exp.bullets && exp.bullets.length > 0 ? `
+                <ul class="timeline-bullets">
+                  ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
+                </ul>
+              ` : ""}
+              ${exp.chips && exp.chips.length > 0 ? `
+                <div class="timeline-chips">
+                  ${exp.chips.map(c => `<span class="timeline-chip">${c}</span>`).join("")}
+                </div>
+              ` : ""}
+            </div>
           </div>
-        ` : ""}
-      </div>
+        `;
+      }).join("")}
     </div>
-  `).join("");
+  `;
 }
 
 function renderEducation(educationList) {
   const eduGroup = document.getElementById("exp-group-edu");
   if (!eduGroup || !educationList) return;
 
-  eduGroup.innerHTML = educationList.map(edu => `
-    <div class="exp-row">
-      <div class="exp-row-left">
-        <div class="exp-date">${edu.period}</div>
-        <div class="exp-org">${edu.org}</div>
-        ${edu.subOrg ? `<div style="font-family:var(--mono); font-size:0.6rem; color:var(--mid); margin-top:0.2rem;">${edu.subOrg}</div>` : ""}
-        ${edu.honors ? `<div style="font-family:var(--mono); font-size:0.58rem; color:var(--mid); margin-top:0.35rem;">${edu.honors}</div>` : ""}
-      </div>
-      <div class="exp-row-right">
-        <div class="exp-role">${edu.role}</div>
-        ${edu.summary ? `<p class="exp-summary">${edu.summary}</p>` : ""}
-        ${edu.bullets && edu.bullets.length > 0 ? `
-          <ul class="exp-bullets">
-            ${edu.bullets.map(b => `<li>${b}</li>`).join("")}
-          </ul>
-        ` : ""}
-        ${edu.chips && edu.chips.length > 0 ? `
-          <div class="exp-chips">
-            ${edu.chips.map(c => `<span class="exp-chip">${c}</span>`).join("")}
+  eduGroup.innerHTML = `
+    <div class="exp-timeline">
+      ${educationList.map(edu => `
+        <div class="timeline-item">
+          <div class="timeline-spine">
+            <div class="timeline-node"></div>
           </div>
-        ` : ""}
-      </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-meta">
+                <span class="timeline-badge">${edu.period}</span>
+                ${edu.honors ? `<span class="timeline-honors-tag">★ ${edu.honors}</span>` : ""}
+              </div>
+              <h3 class="timeline-title">${edu.role}</h3>
+              <div class="timeline-company">
+                <span class="timeline-org">${edu.org}</span>
+                ${edu.subOrg ? `<span class="timeline-suborg">· ${edu.subOrg}</span>` : ""}
+              </div>
+            </div>
+            ${edu.summary ? `<p class="timeline-summary">${edu.summary}</p>` : ""}
+            ${edu.bullets && edu.bullets.length > 0 ? `
+              <ul class="timeline-bullets">
+                ${edu.bullets.map(b => `<li>${b}</li>`).join("")}
+              </ul>
+            ` : ""}
+            ${edu.chips && edu.chips.length > 0 ? `
+              <div class="timeline-chips">
+                ${edu.chips.map(c => `<span class="timeline-chip">${c}</span>`).join("")}
+              </div>
+            ` : ""}
+          </div>
+        </div>
+      `).join("")}
     </div>
-  `).join("");
+  `;
+}
+
+function getSkillCategoryIcon(id, category) {
+  const key = (id || category || "").toLowerCase();
+  if (key.includes("engine") || key.includes("architecture")) {
+    return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+      <polyline points="2 17 12 22 22 17" />
+      <polyline points="2 12 12 17 22 12" />
+    </svg>`;
+  }
+  if (key.includes("language") || key.includes("shader")) {
+    return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+      <line x1="14" y1="4" x2="10" y2="20" />
+    </svg>`;
+  }
+  if (key.includes("gameplay") || key.includes("ai")) {
+    return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <rect x="9" y="9" width="6" height="6" />
+      <line x1="9" y1="1" x2="9" y2="4" />
+      <line x1="15" y1="1" x2="15" y2="4" />
+      <line x1="9" y1="20" x2="9" y2="23" />
+      <line x1="15" y1="20" x2="15" y2="23" />
+      <line x1="20" y1="9" x2="23" y2="9" />
+      <line x1="20" y1="15" x2="23" y2="15" />
+      <line x1="1" y1="9" x2="4" y2="9" />
+      <line x1="1" y1="15" x2="4" y2="15" />
+    </svg>`;
+  }
+  return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="6" y1="3" x2="6" y2="15" />
+    <circle cx="18" cy="6" r="3" />
+    <circle cx="6" cy="18" r="3" />
+    <path d="M18 9a9 9 0 0 1-9 9" />
+  </svg>`;
 }
 
 function renderSkills(skillsList) {
   const skillsGrid = document.getElementById("skills-grid");
   if (!skillsGrid || !skillsList) return;
 
-  skillsGrid.innerHTML = skillsList.map(cat => `
-    <div class="skill-col">
-      <div class="skill-col-label">${cat.category}</div>
-      <ul class="skill-list">
-        ${cat.items.map(item => `<li>${item}</li>`).join("")}
-      </ul>
-    </div>
-  `).join("");
+  skillsGrid.innerHTML = skillsList.map((cat) => {
+    const iconSvg = getSkillCategoryIcon(cat.id, cat.category);
+    const descHtml = cat.desc ? `<p class="skill-cat-desc">${cat.desc}</p>` : "";
+    const itemsHtml = (cat.items || []).map(item => `
+      <li>${item}</li>
+    `).join("");
+
+    return `
+      <div class="skill-category" data-category="${cat.id || ''}">
+        <div class="skill-cat-header">
+          <h3 class="skill-cat-title">
+            <span class="skill-cat-icon" aria-hidden="true">${iconSvg}</span>
+            <span>${cat.category}</span>
+          </h3>
+          ${descHtml}
+          <div class="skill-cat-divider" aria-hidden="true"></div>
+        </div>
+        <ul class="skill-list">
+          ${itemsHtml}
+        </ul>
+      </div>
+    `;
+  }).join("");
 }
 
 function renderWorkGrid(projectsList) {
@@ -254,27 +334,35 @@ function initExpTabs() {
   const eduGroup = document.getElementById("exp-group-edu");
   const expSection = document.getElementById("experience");
 
+  const switchTab = (targetTab) => {
+    if (expSection) {
+      expSection.classList.remove("view-all", "view-pro", "view-edu");
+      expSection.classList.add(`view-${targetTab}`);
+    }
+
+    if (targetTab === "all") {
+      if (proGroup) proGroup.style.display = "block";
+      if (eduGroup) eduGroup.style.display = "block";
+    } else if (targetTab === "pro") {
+      if (proGroup) proGroup.style.display = "block";
+      if (eduGroup) eduGroup.style.display = "none";
+    } else if (targetTab === "edu") {
+      if (proGroup) proGroup.style.display = "none";
+      if (eduGroup) eduGroup.style.display = "block";
+    }
+  };
+
+  // Set default visibility based on initial active button
+  const activeBtn = document.querySelector(".exp-tab-btn.active");
+  const defaultTab = activeBtn ? activeBtn.getAttribute("data-tab") : "pro";
+  switchTab(defaultTab);
+
   expBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       expBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       const targetTab = btn.getAttribute("data-tab");
-
-      if (expSection) {
-        expSection.classList.remove("view-all", "view-pro", "view-edu");
-        expSection.classList.add(`view-${targetTab}`);
-      }
-
-      if (targetTab === "all") {
-        if (proGroup) proGroup.style.display = "block";
-        if (eduGroup) eduGroup.style.display = "block";
-      } else if (targetTab === "pro") {
-        if (proGroup) proGroup.style.display = "block";
-        if (eduGroup) eduGroup.style.display = "none";
-      } else if (targetTab === "edu") {
-        if (proGroup) proGroup.style.display = "none";
-        if (eduGroup) eduGroup.style.display = "block";
-      }
+      switchTab(targetTab);
     });
   });
 }

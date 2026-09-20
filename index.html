@@ -17,7 +17,7 @@
   <!-- FIXED NAVIGATION BAR -->
   <nav>
     <a href="#intro" class="nav-brand">
-      Arnav Sanghavi <span>Dev</span>
+      Arnav Sanghavi
     </a>
     
     <div class="nav-links">
@@ -25,133 +25,36 @@
       <a href="#experience">Resume</a>
       <a href="#skills">Skills</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <!-- HERO / INTRO SECTION -->
   <header id="intro">
-    <!-- 3D TECHNICAL MESH GRAPHIC & DYNAMIC GRADIENT AURA -->
-    <div class="intro-blueprint-bg" aria-hidden="true">
+    <!-- GEARS OF WAR ATMOSPHERIC BACKGROUND -->
+    <div class="intro-bg-layer" aria-hidden="true">
+      <div class="intro-gears-img"></div>
+      <div class="intro-gears-gradient"></div>
       <div class="intro-blueprint-glow"></div>
-    <svg class="intro-blueprint-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 650" fill="none" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <pattern id="bpGridSmall" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.04" />
-        </pattern>
-        <pattern id="bpGridLarge" width="100" height="100" patternUnits="userSpaceOnUse">
-          <rect width="100" height="100" fill="url(#bpGridSmall)" />
-          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.09" />
-        </pattern>
-        <pattern id="wallHatch" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="0" y2="8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.16" />
-        </pattern>
-        <linearGradient id="bpLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.0" />
-          <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.45" />
-          <stop offset="70%" stop-color="#2563eb" stop-opacity="0.45" />
-          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
-        </linearGradient>
-        <linearGradient id="navmeshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#0284c7" stop-opacity="0.07" />
-          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.02" />
-        </linearGradient>
-        <marker id="bpArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-          <path d="M 1 1 L 7 4 L 1 7 Z" fill="#38bdf8" fill-opacity="0.5" />
-        </marker>
-        <marker id="bpArrowDim" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-          <path d="M 1 1 L 5 3 L 1 5 Z" fill="#38bdf8" fill-opacity="0.35" />
-        </marker>
-        <style>
-          .bp-scan { animation: bpScan 16s linear infinite; }
-          @keyframes bpScan { 0% { transform: translateY(-40px); opacity: 0; } 15% { opacity: 0.5; } 85% { opacity: 0.5; } 100% { transform: translateY(650px); opacity: 0; } }
-          .bp-dim { stroke: #38bdf8; stroke-opacity: 0.3; stroke-width: 0.8; stroke-dasharray: 4,3; }
-          .bp-wall { stroke: #38bdf8; stroke-width: 1.6; stroke-opacity: 0.55; fill: url(#wallHatch); }
-          .bp-cover-low { stroke: #38bdf8; stroke-width: 1.2; stroke-opacity: 0.5; fill: rgba(56, 189, 248, 0.06); }
-          .bp-cover-high { stroke: #60a5fa; stroke-width: 1.3; stroke-opacity: 0.55; fill: rgba(37, 99, 235, 0.10); }
-          .bp-title { font-family: "JetBrains Mono", monospace; font-size: 9.5px; fill: #38bdf8; font-weight: 600; letter-spacing: 1.2px; }
-          .bp-meta { font-family: "JetBrains Mono", monospace; font-size: 7.5px; fill: #64748b; letter-spacing: 0.8px; }
-          .bp-label { font-family: "JetBrains Mono", monospace; font-size: 8px; fill: #7dd3fc; font-weight: 500; letter-spacing: 0.6px; }
-        </style>
-      </defs>
-      <rect x="520" y="0" width="920" height="650" fill="url(#bpGridLarge)" />
-      <g class="bp-scan">
-        <line x1="560" y1="0" x2="1420" y2="0" stroke="url(#bpLineGrad)" stroke-width="1.2" stroke-opacity="0.35" />
-      </g>
-      <g transform="translate(1020, 32)">
-        <rect x="0" y="0" width="380" height="46" fill="#04060a" fill-opacity="0.75" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
-        <line x1="0" y1="22" x2="380" y2="22" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.2" />
-        <text x="12" y="15" class="bp-title">SYS.LEVEL_DESIGN // ENCOUNTER_SCHEMATIC</text>
-        <text x="368" y="15" class="bp-meta" fill="#38bdf8" text-anchor="end">REV 04</text>
-        <text x="12" y="36" class="bp-meta">UNREAL ENGINE 5 · C++ / STATETREE · SCALE: 1UU = 1CM</text>
-      </g>
-      <polygon points="680,170 1260,170 1340,230 1340,430 1220,490 740,490 680,430" fill="url(#navmeshGrad)" stroke="#0284c7" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="6,4" />
-      <text x="696" y="190" class="bp-meta" opacity="0.6">NAVMESH_WALKABLE // RECAST</text>
-      <path d="M 690,210 L 980,210 M 1040,210 L 1280,210" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
-      <rect x="690" y="202" width="290" height="8" class="bp-wall" />
-      <rect x="1040" y="202" width="240" height="8" class="bp-wall" />
-      <path d="M 1280,210 L 1280,290 M 1280,350 L 1280,460" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
-      <rect x="1272" y="210" width="8" height="80" class="bp-wall" />
-      <rect x="1272" y="350" width="8" height="110" class="bp-wall" />
-      <path d="M 1280,290 L 1330,290 M 1280,350 L 1330,350" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
-      <path d="M 1330,290 A 60 60 0 0 1 1330,350" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="3,3" />
-      <path d="M 1280,460 L 740,460 L 690,410 L 690,210" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.65" />
-      <rect x="740" y="452" width="540" height="8" class="bp-wall" />
-      <rect x="790" y="250" width="85" height="16" rx="2" class="bp-cover-low" />
-      <rect x="910" y="250" width="30" height="30" rx="2" class="bp-cover-high" />
-      <line x1="910" y1="250" x2="940" y2="280" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
-      <line x1="910" y1="280" x2="940" y2="250" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
-      <rect x="990" y="315" width="110" height="18" rx="2" class="bp-cover-low" />
-      <rect x="1140" y="250" width="30" height="30" rx="2" class="bp-cover-high" />
-      <line x1="1140" y1="250" x2="1170" y2="280" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
-      <line x1="1140" y1="280" x2="1170" y2="250" stroke="#60a5fa" stroke-width="0.7" stroke-opacity="0.3" />
-      <rect x="850" y="385" width="90" height="16" rx="2" class="bp-cover-low" />
-      <rect x="1110" y="385" width="90" height="16" rx="2" class="bp-cover-low" />
-      <g transform="translate(730, 335)">
-        <circle cx="0" cy="0" r="13" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7" fill="none" />
-        <circle cx="0" cy="0" r="3.5" fill="#38bdf8" fill-opacity="0.85" />
-        <line x1="-16" y1="0" x2="16" y2="0" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
-        <line x1="0" y1="-16" x2="0" y2="16" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
-        <text x="-20" y="-18" class="bp-label">PLAYER_START</text>
-      </g>
-      <path d="M 744,330 L 980,250 M 744,340 L 980,420" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="4,4" />
-      <path d="M 825,305 A 95 95 0 0 1 825,365" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
-      <text x="832" y="338" class="bp-meta" opacity="0.6">FOV 65°</text>
-      <path d="M 750,320 Q 820,230 890,230 T 1050,225 T 1200,270" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="6,4" marker-end="url(#bpArrow)" />
-      <path d="M 750,350 Q 820,430 920,430 T 1080,430 T 1210,370" fill="none" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="6,4" marker-end="url(#bpArrow)" />
-      <g transform="translate(1230, 325)">
-        <circle cx="0" cy="0" r="22" stroke="#ef4444" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4,3" fill="rgba(239, 68, 68, 0.04)" />
-        <circle cx="0" cy="0" r="10" stroke="#ef4444" stroke-width="0.9" stroke-opacity="0.6" fill="none" />
-        <line x1="-5" y1="-5" x2="5" y2="5" stroke="#ef4444" stroke-width="1" stroke-opacity="0.7" />
-        <line x1="5" y1="-5" x2="-5" y2="5" stroke="#ef4444" stroke-width="1" stroke-opacity="0.7" />
-        <text x="-32" y="-28" class="bp-label" fill="#f87171">AI_SPAWN_ZONE</text>
-      </g>
-      <line x1="690" y1="485" x2="1280" y2="485" class="bp-dim" marker-start="url(#bpArrowDim)" marker-end="url(#bpArrowDim)" />
-      <line x1="690" y1="472" x2="690" y2="495" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
-      <line x1="1280" y1="472" x2="1280" y2="495" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.25" />
-      <text x="985" y="498" class="bp-meta" text-anchor="middle">SPAN: 3600 UU (36m)</text>
-    </svg>
     </div>
     
     <div class="intro-content">
       <div class="intro-left">
         <div class="intro-tagline" id="intro-tagline">The Coalition (Microsoft) · Gears of War: E-Day</div>
-        <h1 class="intro-name" id="intro-name">Arnav<br /><em>Sanghavi</em></h1>
+        <h1 class="intro-name" id="intro-name">Arnav <em>Sanghavi</em></h1>
         <p class="intro-role-desc" id="intro-role-desc">
           Technical Gameplay Designer & Gameplay Systems Engineer at <strong>The Coalition Studio (Microsoft)</strong>. Specializing in <strong>C++ gameplay architecture, NPC behavior systems (StateTree / Smart Objects), systemic spawning, and player locomotion</strong> across Unreal Engine and Unity.
         </p>
         
-        <div class="intro-actions">
-          <a href="#work" class="btn-solid">View Projects ↓</a>
-          <a href="#contact" class="btn-outline">Get in Touch</a>
+        <div class="intro-actions" id="intro-actions">
+          <a href="mailto:arnav.sanghavi@gmail.com" class="btn-solid intro-email-btn" id="intro-email-btn">
+            <span>✉</span> Contact Me
+          </a>
+          <div class="intro-socials" id="intro-socials">
+            <a href="https://www.linkedin.com/in/arnavsanghavi/" target="_blank" class="social-link">LinkedIn ↗</a>
+            <a href="https://github.com/anzy03" target="_blank" class="social-link">GitHub ↗</a>
+            <a href="https://mranzy.itch.io/" target="_blank" class="social-link">itch.io ↗</a>
+          </div>
         </div>
-      </div>
-      
-      <div class="intro-meta" id="intro-meta">
-        <div>Vancouver, BC, Canada</div>
-        <a href="https://www.linkedin.com/in/arnavsanghavi/" target="_blank">LinkedIn ↗</a> ·
-        <a href="https://github.com/anzy03" target="_blank">GitHub ↗</a> ·
-        <a href="https://mranzy.itch.io/" target="_blank">itch.io ↗</a>
       </div>
     </div>
   </header>
@@ -178,23 +81,22 @@
   </section>
 
   <!-- RESUME / EXPERIENCE SECTION -->
-  <section id="experience" class="view-all">
+  <section id="experience" class="view-pro">
     <div class="sec-bar">
-      <span class="sec-title">Resume & Background</span>
+      <span class="sec-title">Career & Background</span>
       <div class="exp-tabs">
-        <button class="exp-tab-btn active" data-tab="all">All</button>
-        <button class="exp-tab-btn" data-tab="pro">Experience</button>
+        <button class="exp-tab-btn active" data-tab="pro">Work Experience</button>
         <button class="exp-tab-btn" data-tab="edu">Education</button>
       </div>
     </div>
 
-    <!-- Work Experience Group -->
+    <!-- Work Experience Timeline -->
     <div class="exp-group" id="exp-group-pro">
       <!-- Rendered dynamically from data.json -->
     </div>
 
-    <!-- Education Group -->
-    <div class="exp-group" id="exp-group-edu">
+    <!-- Education Timeline -->
+    <div class="exp-group" id="exp-group-edu" style="display: none;">
       <!-- Rendered dynamically from data.json -->
     </div>
   </section>
@@ -203,10 +105,13 @@
   <section id="skills">
     <div class="sec-bar">
       <span class="sec-title">Technical Stack & Skills</span>
+      <div class="sec-badge">Systems & Architecture</div>
     </div>
     
-    <div class="skills-grid" id="skills-grid">
-      <!-- Rendered dynamically from data.json -->
+    <div class="skills-container">
+      <div class="skills-grid" id="skills-grid">
+        <!-- Rendered dynamically from data.json -->
+      </div>
     </div>
   </section>
 
@@ -222,7 +127,6 @@
           <img src="assets/profile.jpg" alt="Arnav Sanghavi" class="about-avatar-img" id="about-avatar-img" />
         </div>
         <div class="about-name" id="about-name">Arnav Sanghavi</div>
-        <div class="about-title" id="about-title">Technical Gameplay Designer</div>
         <div class="about-loc" id="about-loc">The Coalition · Vancouver, BC</div>
       </div>
       
@@ -230,18 +134,11 @@
         <div id="about-paragraphs">
           <!-- Rendered dynamically from data.json -->
         </div>
-        
-        <!-- CONTACT INFO -->
-        <div class="about-contact" id="contact">
-          <div class="about-contact-label">Get In Touch & Connect</div>
-          <div class="about-contact-row">
-            <a href="mailto:arnav.sanghavi@gmail.com" class="btn-solid about-email-btn" id="about-email-btn">
-              <span>✉</span> arnav.sanghavi@gmail.com
-            </a>
-            <div class="about-socials" id="about-socials">
-              <!-- Rendered dynamically from data.json -->
-            </div>
-          </div>
+
+        <div class="about-actions">
+          <a href="assets/Arnav_Sanghavi_Resume.pdf" class="btn-solid about-resume-btn" id="about-resume-btn" download target="_blank">
+            <span>↓</span> Download Resume
+          </a>
         </div>
       </div>
     </div>
