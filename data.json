@@ -9,7 +9,7 @@
     "email": "arnav.sanghavi@gmail.com",
     "avatar": "assets/profile.jpg",
     "aboutLocation": "The Coalition · Vancouver, BC",
-    "resume": "assets/Arnav_Sanghavi_Resume.pdf",
+    "resume": "assets/Arnav_Sanghavi_Technical_Designer_Resume_Sept_2026.pdf",
     "socials": [
       {
         "label": "LinkedIn",
@@ -39,11 +39,13 @@
       "role": "Technical Gameplay Designer",
       "summary": "Lead technical design and C++ implementation of core systemic mechanics, NPC behaviors, and actor population pipelines for AAA production.",
       "bullets": [
-        "Owned the architecture and runtime optimization of NPC behavior systems, implementing modular AI frameworks (StateTree, Smart Objects) to power dense, low-latency background populations in live builds.",
-        "Spearheaded the technical design and optimization of all in-game systemic spawning mechanics, taking full end-to-end ownership of development and maintenance.",
-        "Oversaw technical design and optimization of equipment and inventory systems, utilizing data-oriented design fundamentals to drastically reduce CPU overhead and frame-time constraints.",
-        "Partnered directly with engineering to lead native C++ conversions of critical gameplay systems, profiling CPU, memory, and runtime bottlenecks with LOD and culling strategies.",
-        "Served as primary technical point-of-contact for gameplay systems, authoring comprehensive architecture documentation and unblocking cross-discipline workflows."
+        "Refactored smartobjects and NPC behaviors, replacing complicated workflows with scalable architecture to eliminate designer bottlenecks and speed up content creation.",
+        "Designed and optimized enemy spawn closets, preventing frame drops and ensuring predictable combat pacing in encounters.",
+        "Converted core gameplay systems from Blueprint to C++ (smartobjects, narrative events, spawn closets), eliminating CPU performance spikes and execution overhead.",
+        "Built custom editor tools that automated repetitive setups and improved asset visibility, reducing manual overhead and designer search time.",
+        "Acted as the key technical escalation point for Level and Narrative teams, diagnosing and fixing critical script errors and systemic blockers in live builds.",
+        "Restructured Narrative Graphs and barks implementation with Narrative Designers, solving data disorganization to ensure clean, scalable graph executions.",
+        "Scaled team capability and script quality by authoring technical documentation, running bi-weekly info sessions & setup reviews, and enforcing strict scripting standards."
       ],
       "chips": [
         "Unreal Engine 5",
@@ -62,11 +64,11 @@
       "role": "Game Programmer 1",
       "summary": "Engineered gameplay systems, movement controllers, and technical pipelines across live-service mobile and PC titles.",
       "bullets": [
-        "Optimized multiplayer gameplay systems, weapon mechanics, and character locomotion, reducing CPU/network overhead and improving responsiveness by 15%.",
-        "Took sole ownership of an inherited, undocumented legacy codebase; refactored unoptimized systems to integrate scalable data-oriented mechanics with zero downtime.",
-        "Delivered a fully functional modular AI agent prototype within a strict one-month sprint, achieving runtime performance gains integrated into the production build.",
-        "Authored technical documentation and workflow architecture guides for Unity and Unreal, accelerating engineering onboarding and reducing troubleshooting time by 30%.",
-        "Assisted designers with visual scripting and custom tools, implementing 5 new systemic mechanics while aligning design goals with performant code."
+        "Optimized multiplayer gameplay systems, focusing on weapon mechanics and player movement, reducing lag and improving responsiveness by 15%.",
+        "Developed technical documentation and workflow guides for Unreal and Unity, enabling faster onboarding for new team members and reducing troubleshooting time by 30%.",
+        "Assisted designers with scripting and visual scripting, implementing 5 new gameplay mechanics and ensuring cross-discipline alignment between designers and engineers.",
+        "Delivered a fully functional AI prototype within one month, demonstrating behavioural improvements that were integrated into the final game.",
+        "Took ownership of a legacy codebase inherited from another company, with no documentation or support, and successfully optimized and integrated new gameplay mechanics."
       ],
       "chips": [
         "Unity",
@@ -190,7 +192,7 @@
       "title": "Gears of War: E-Day",
       "cat": "AAA Commercial / UE5",
       "filter": [
-        "games",
+        "released",
         "mechanics"
       ],
       "role": "Technical Gameplay Designer (C++ / UE5)",
@@ -229,7 +231,7 @@
       "title": "FEI Equestriad World Tour",
       "cat": "Commercial / Mobile",
       "filter": [
-        "games"
+        "released"
       ],
       "role": "Game Programmer 1 (BL!NK MEDIA)",
       "thumb": "assets/images/fei-equestriad.jpg",

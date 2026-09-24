@@ -3,7 +3,7 @@
 // ==========================================================================
 
 let PORTFOLIO = null;
-let currentFilter = "all";
+let currentFilter = "released";
 let activeModalProject = null;
 
 // Initialize on DOM ready
